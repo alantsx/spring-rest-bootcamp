@@ -36,6 +36,30 @@ private BigDecimal preco;
 
 ```
 
+@ConvertGroup(from = Default.class, to = ValidationGroup.GroupClass.class): Ensure that the validation are made only inside the group
+
+```
+// Model Ordem Servico
+@Valid
+@ConvertGroup(from = Default.class, to = ValidationGroups.ClienteId.class)
+@ManyToOne
+private Cliente cliente;
+
+// Group Interface - domain.ValidationGroups.java
+
+public interface ValidationGroups {
+	public interface ClienteId { }
+}
+
+// Model Cliente Id
+
+@NotNull(groups = ValidationGroups.class)
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;
+
+```
+
 - @JsonInclude: Annotation used to indicate when value of the annotated property is to be serialized. Without JsonInclude, property values are always included. By using JsonInclude is possible to specify simples exclusion rules to reduce amount of properties shown
 
 - JpaRepository: Extends repository to support some query instructions pre-defined such as save, findAll, findById, delete and more.
