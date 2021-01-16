@@ -16,7 +16,23 @@ It mapps and directs requests from users to Services. Those Services will handle
 
 - RequestMapping: used on Controllers to handle requests from users. Most used Mappings are @GetMapping, @PostMapping, @PutMapping and @DeleteMapping
 
-- Bean Validation: Create validations for the data (such as @NotBlank, @Email, @Size(max=20))
+- Bean Validation: Create validations for the data (such as @NotBlank, @Email, @Size(max=20)). It's also necessary to insert @Valid on called Controller Method.
+Example:
+
+```	
+// OrdemServico Controller
+public OrdemServico criar(@Valid @RequestBody OrdemServico ordemServico) {
+		return gestaoOrdemServico.criar(ordemServico);
+	}
+  
+// OrdemServico Model
+  @NotBlank
+	private String descricao;
+	
+	@NotNull
+	private BigDecimal preco;
+
+```
 
 - @JsonInclude: Annotation used to indicate when value of the annotated property is to be serialized. Without JsonInclude, property values are always included. By using JsonInclude is possible to specify simples exclusion rules to reduce amount of properties shown
 
