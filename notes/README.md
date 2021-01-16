@@ -19,3 +19,10 @@ It mapps and directs requests from users to Services. Those Services will handle
 - Bean Validation: Create validations for the data (such as @NotBlank, @Email, @Size(max=20))
 
 - @JsonInclude: Annotation used to indicate when value of the annotated property is to be serialized. Without JsonInclude, property values are always included. By using JsonInclude is possible to specify simples exclusion rules to reduce amount of properties shown
+
+- JpaRepository: Extends repository to support some query instructions pre-defined such as save, findAll, findById, delete and more.
+Example:
+`public interface ExampleRepository extends JpaRepository<Example, Long>{
+
+}` 
+where Example is the Model.
