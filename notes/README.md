@@ -26,11 +26,11 @@ public OrdemServico criar(@Valid @RequestBody OrdemServico ordemServico) {
 	}
   
 // OrdemServico Model
-  @NotBlank
-	private String descricao;
+@NotBlank
+private String descricao;
 	
-	@NotNull
-	private BigDecimal preco;
+@NotNull
+private BigDecimal preco;
 
 ```
 
