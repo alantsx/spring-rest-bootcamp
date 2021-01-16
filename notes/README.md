@@ -71,3 +71,5 @@ public interface ExampleRepository extends JpaRepository<Example, Long>{
 }
 ```
 where Example is the Model.
+
+- ModelMapper: Maps objects transforming these objects from on type to another.
