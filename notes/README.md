@@ -22,7 +22,10 @@ It mapps and directs requests from users to Services. Those Services will handle
 
 - JpaRepository: Extends repository to support some query instructions pre-defined such as save, findAll, findById, delete and more.
 Example:
-`public interface ExampleRepository extends JpaRepository<Example, Long>{
 
-}` 
+```
+public interface ExampleRepository extends JpaRepository<Example, Long>{
+
+}
+```
 where Example is the Model.
