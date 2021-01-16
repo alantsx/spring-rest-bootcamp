@@ -10,7 +10,7 @@ It receives any user input from Controller
 - The Controller receives inputs from user and use these inputs to manipulate the data based on Model logics and rules.
 It mapps and directs requests from users to Services. Those Services will handle these requests based on their business rules, manipulate the data and finally return some response so the controller can take back this response to the View Layer
 
-#### Some Spring Tools
+#### Used Features
 
 - Flyway: execute SQL queries and migrations
 
