@@ -17,6 +17,7 @@ It mapps and directs requests from users to Services. Those Services will handle
 - RequestMapping: used on Controllers to handle requests from users. Most used Mappings are @GetMapping, @PostMapping, @PutMapping and @DeleteMapping
 
 - Bean Validation: Create validations for the data (such as @NotBlank, @Email, @Size(max=20)). It's also necessary to insert @Valid on called Controller Method.
+
 @Valid: Marks a property, method parameter or method return type for validation cascading. What goes with @Valid will check further validations from Entities.
 Example:
 
