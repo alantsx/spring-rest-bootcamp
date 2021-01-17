@@ -1,5 +1,4 @@
-# spring-rest-bootcamp
-Notes and project upload using Spring Rest
+# spring-rest-introduction-course
 
 ## About project:
 This project presents a CRUD system with Entities relations using Spring Boot Rest API. It is able to Create, List, Search, Update and Delete entity Client and entity Service Orders. The idea is to present an early development of a service-marketplace, which people can order many kinds of services such as Computer Repair, Personal Trainer, Haircutting and more.
